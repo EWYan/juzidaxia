@@ -1,0 +1,58 @@
+site_name: 莫问前程 - just for fun
+site_author: juzi
+site_description: 桔子的自留地
+
+theme:
+  name: material
+  language: zh
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.code.annotation
+    - content.code.copy
+    - content.tabs.link
+  palette:
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: indigo
+        accent: indigo
+        toggle:
+            icon: material/brightness-4
+            name: Switch to dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: grey
+        accent: white
+        toggle:
+            icon: material/brightness-7
+            name: Switch to light mode
+  logo: _assets/favicon.jpg
+  favicon: _assets/favicon.jpg
+  icon:
+      repo: https://github.com/EWYan
+
+plugins:
+    - search:
+          lang:
+              - en
+              - zh
+          separator: '[\s\-\.]+'
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/EWYan
+          name: Juzi's github
+copyright: Copyright &copy; 2023 - 2024 Juzi Yan
+
+
+nav:
+    - Home: index.md
+    - 技术:
+        - tricore context: tech/context_switch.md
+    - 关于我: about.md
