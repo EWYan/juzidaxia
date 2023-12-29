@@ -42,6 +42,7 @@ plugins:
               - en
               - zh
           separator: '[\s\-\.]+'
+    - git-revision-date
 
 extra:
     social:
