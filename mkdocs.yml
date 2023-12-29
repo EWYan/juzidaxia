@@ -45,14 +45,30 @@ plugins:
 
 extra:
     social:
-        - icon: fontawesome/brands/github
+        - icon: fontawesome/brands/github-alt
           link: https://github.com/EWYan
           name: Juzi's github
-copyright: Copyright &copy; 2023 - 2024 Juzi Yan
 
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
 
 nav:
     - Home: index.md
     - 技术:
         - tricore context: tech/context_switch.md
     - 关于我: about.md
+
+
+copyright: |
+  &copy; 2023 <a href="https://github.com/EWYan"  target="_blank" rel="noopener">Juzi Yan</a>
