@@ -4,13 +4,11 @@ site_description: 桔子的自留地
 
 theme:
   name: material
-  language: zh
 
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
-    - toc.integrate
     - search.suggest
     - search.highlight
     - content.code.annotation
