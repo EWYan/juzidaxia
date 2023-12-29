@@ -19,17 +19,17 @@ theme:
   palette:
       - media: "(prefers-color-scheme: light)"
         scheme: default
-        primary: indigo
-        accent: indigo
+        primary: white
+        accent: black
         toggle:
-            icon: material/brightness-4
+            icon: material/weather-sunny
             name: Switch to dark mode
       - media: "(prefers-color-scheme: dark)"
         scheme: slate
-        primary: grey
+        primary: black
         accent: white
         toggle:
-            icon: material/brightness-7
+            icon: material/weather-night
             name: Switch to light mode
   logo: _assets/favicon.jpg
   favicon: _assets/favicon.jpg
