@@ -1,5 +1,8 @@
-# tc_task_switch
+
+# Tricore Task Switch机制
 ---
+> 🪶date: 2023/12/23
+
 ## 任务
 在RTOS中，一个任务包含了一系列的状态，通常使用上下文（Context）来定义一个任务，上下文通常包含一些列CPU寄存器某一时刻的一个状态（Snap Shoot), 例如当前CPU上正在执行的任务是Task0，意思是在说当前CPU所处的状态是在Task0的上下文中；
 ![context](../_assets/context.png)
@@ -20,3 +23,5 @@
 5. task1运行
 
 ![task_switch](../_assets/task_switch.png)
+
+---

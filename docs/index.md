@@ -1,5 +1,5 @@
 # Welcome to juzi Land.
-
+---
 > **Life is too short to worry about little things.🧩**
 
 > **Have fun. 🏀**
@@ -12,7 +12,8 @@
 
 > **Teach yourself and teach others.🚀**
 
----
+
 ![goose](_assets/goose.jpg)
 
+---
 

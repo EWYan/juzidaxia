@@ -64,9 +64,12 @@ markdown_extensions:
 
 nav:
     - Home: index.md
-    - 技术:
-        - tricore context: tech/context_switch.md
-    - 关于我: about.md
+    - 技术碎笔:
+      - tricore context: tech/context_switch.md
+    - 它山之石:
+      - 阅读推荐: others/reading.md
+      - 工具推荐: others/tools.md
+    - About: about.md
 
 
 copyright: |
