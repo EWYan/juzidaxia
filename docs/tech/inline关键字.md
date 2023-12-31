@@ -34,9 +34,9 @@ void bar_main(void) {
     test_inline();
 }
 ```
-生成地汇编代码如下，可以看到test_inline函数被直接展开到了foo_main函数中（行3），而bar_main函数中则直接调用了test_inline函数（行34）
+生成地汇编代码如下，可以看到test_inline函数被直接展开到了foo_main函数中（行3，行5-13），而bar_main函数中则直接调用了test_inline函数（行34）
 
-```asm title="inline_test.s" linenums="1" hl_lines="3 19 34"
+```asm title="inline_test.s" linenums="1" hl_lines="3 5-13 19-29 34"
 
 Starting disassembly of section 182 (.text.inline_test.foo_main):
 
@@ -114,8 +114,8 @@ void bar_main(void) {
 ltc E108: multiple definitions of symbol "test_inline" in both "inline_test1.o" and "inline_test.o"
 ```
 为啥使用了inline关键字，在代码链接的时候还会存在符号冲突的问题呢？
-既然有符号冲突，那么就说明在链接的时候，编译器在链接的时候找到了两个test_inline函数的定义，那么这两个定义分别在哪里呢？查看inline_test.o文件的汇编代码，可以看到在行3处foo_main函数对test_inline函数做了内联展开，编译器同时在目标文件中保留了test_inlie函数的函数定义，行22/23处是test_inline函数的定义，同理inline_test1.o文件中也存在test_inline函数的定义，所以在链接的时候就会存在符号冲突的问题。
-```bash title="查康inline_test.o文件" linenums="1" hl_lines="6 22 23"
+既然有符号冲突，那么就说明在链接的时候，编译器在链接的时候找到了两个test_inline函数的定义，那么这两个定义分别在哪里呢？查看inline_test.o文件的汇编代码，可以看到在行7-15处foo_main函数对test_inline函数做了内联展开，编译器同时在目标文件中保留了test_inlie函数的函数定义，行22-33处是test_inline函数的定义，同理inline_test1.o文件中也存在test_inline函数的定义，所以在链接的时候就会存在符号冲突的问题。
+```bash title="查康inline_test.o文件" linenums="1" hl_lines="7-15 22-33"
 #> hldumptc.exe -F2 inline_test.o > inline_test.o.asm
 ---------- Section dump ----------
 
