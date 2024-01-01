@@ -40,4 +40,7 @@ add(int, int):
 ## [在线流程图绘制 draw.io](https://app.diagrams.net/)
 ![text to diagram](../_assets/drawio.png)
 
+
+## [远程办公软件 Parsec](https://parsec.app/)
+
 ---

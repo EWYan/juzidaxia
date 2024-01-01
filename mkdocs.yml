@@ -7,7 +7,7 @@ theme:
 
   features:
     - navigation.tabs
-    - navigation.sections
+    - navigation.instant
     - navigation.top
     - search.suggest
     - search.highlight
@@ -62,16 +62,18 @@ markdown_extensions:
   - pymdownx.mark
   - attr_list
 
+copyright: |
+  &copy; 2023 <a href="https://github.com/EWYan"  target="_blank" rel="noopener">Juzi Yan</a>
+
 nav:
     - 📰Home: index.md
     - 📝技术碎笔:
       - tricore context: tech/context_switch.md
       - inline关键字应用: tech/inline关键字.md
+
     - 📦它山之石:
       - 👀阅读推荐: others/reading.md
       - 🖖工具推荐: others/tools.md
-    - 🧐About: about.md
+    - 📄关于: about.md
 
 
-copyright: |
-  &copy; 2023 <a href="https://github.com/EWYan"  target="_blank" rel="noopener">Juzi Yan</a>
