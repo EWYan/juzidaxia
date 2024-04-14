@@ -43,4 +43,17 @@ add(int, int):
 
 ## [远程办公软件 Parsec](https://parsec.app/)
 
+
+## LLM Chatbots
+
+- 月之暗面 [Kimi](https://kimi.moonshot.cn/)
+- OPENAI [ChartGPT](https://chat.openai.com/)
+- Groq [Groq](https://groq.com/)
+- Google [Gemini](https://gemini.google.com/app)
+
+🌰使用示例(Kimi)：
+
+![alt text](image-2.png)
+
+
 ---
