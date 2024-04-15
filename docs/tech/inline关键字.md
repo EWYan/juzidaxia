@@ -115,7 +115,7 @@ ltc E108: multiple definitions of symbol "test_inline" in both "inline_test1.o" 
 ```
 为啥使用了inline关键字，在代码链接的时候还会存在符号冲突的问题呢？
 既然有符号冲突，那么就说明在链接的时候，编译器在链接的时候找到了两个test_inline函数的定义，那么这两个定义分别在哪里呢？查看inline_test.o文件的汇编代码，可以看到在行7-15处foo_main函数对test_inline函数做了内联展开，编译器同时在目标文件中保留了test_inlie函数的函数定义，行22-33处是test_inline函数的定义，同理inline_test1.o文件中也存在test_inline函数的定义，所以在链接的时候就会存在符号冲突的问题。
-```bash title="查康inline_test.o文件" linenums="1" hl_lines="7-15 22-33"
+```bash title="查看inline_test.o文件" linenums="1" hl_lines="7-15 22-33"
 #> hldumptc.exe -F2 inline_test.o > inline_test.o.asm
 ---------- Section dump ----------
 
@@ -172,7 +172,7 @@ static void test_inline (void) {
 #endif
 ```
 查看test_inline.o文件的汇编代码，发现test_inline函数的定义已经不存在了，编译器在链接的时候也不会存在符号冲突的问题了。
-```bash title="查康inline_test.o文件" linenums="1"
+```bash title="查看inline_test.o文件" linenums="1"
 #> hldumptc.exe -F2 inline_test.o > inline_test.o.asm
 ---------- Section dump ----------
 
