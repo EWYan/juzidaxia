@@ -1,0 +1,1194 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="桔子的自留地">
+      
+      
+        <meta name="author" content="juzi">
+      
+      
+      
+        <link rel="prev" href="../context_switch/">
+      
+      
+        <link rel="next" href="../venv_setting/">
+      
+      
+      <link rel="icon" href="../../_assets/favicon.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>inline关键字应用 - 莫问前程 - just for fun</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#inline" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="莫问前程 - just for fun" class="md-header__button md-logo" aria-label="莫问前程 - just for fun" data-md-component="logo">
+      
+  <img src="../../_assets/favicon.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            莫问前程 - just for fun
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              inline关键字应用
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="white"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  📰Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../context_switch/" class="md-tabs__link">
+          
+  
+  📝技术碎笔
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../others/reading/" class="md-tabs__link">
+          
+  
+  📦它山之石
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        
+  
+    
+  
+  📄关于
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="莫问前程 - just for fun" class="md-nav__button md-logo" aria-label="莫问前程 - just for fun" data-md-component="logo">
+      
+  <img src="../../_assets/favicon.jpg" alt="logo">
+
+    </a>
+    莫问前程 - just for fun
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📰Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    📝技术碎笔
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            📝技术碎笔
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../context_switch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tricore context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    inline关键字应用
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    inline关键字应用
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inline_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      inline关键字的作用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试inline关键字的使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="测试inline关键字的使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验1🍥
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验2🍥
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验3🍥
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结📋
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考资料
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../venv_setting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    venv实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    📦它山之石
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            📦它山之石
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/reading/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    👀阅读推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../others/tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🖖工具推荐
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📄关于
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inline_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      inline关键字的作用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试inline关键字的使用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="测试inline关键字的使用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验1🍥
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验2🍥
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      实验3🍥
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结📋
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考资料
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="inline">inline关键字的几种应用场景</h1>
+<hr />
+<blockquote>
+<p>🪶date: 2023/12/31  </p>
+</blockquote>
+<h2 id="inline_1">inline关键字的作用</h2>
+<p>使用关键字inline告诉编译器，需要将目标函数在调用的地方直接展开，而不是进行常规地函数调用，利用空间换时间的策略，提高代码的执行效率。</p>
+<h2 id="inline_2">测试inline关键字的使用</h2>
+<p><em>基于TASKING v6.3r1版本编译器实验</em>🚧</p>
+<h3 id="1">实验1🍥</h3>
+<p>使用inline关键字在源文件中进行函数定义，在其它源文件中使用extern关键字进行声明</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">inline_test.c</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Printk.h&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">__attribute__</span><span class="p">((</span><span class="n">always_inline</span><span class="p">))</span><span class="w"> </span><span class="kr">inline</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kt">void</span><span class="w"> </span><span class="n">test_inline</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="n">printk</span><span class="p">(</span><span class="s">&quot;test_inline %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="kt">void</span><span class="w"> </span><span class="n">foo_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="kr">__asm</span><span class="p">(</span><span class="s">&quot;nop&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="n">test_inline</span><span class="p">();</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">inline_test1.c</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">__attribute__</span><span class="p">((</span><span class="n">always_inline</span><span class="p">))</span><span class="w"> </span><span class="kr">inline</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="k">extern</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">test_inline</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">bar_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">test_inline</span><span class="p">();</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+生成地汇编代码如下，可以看到test_inline函数被直接展开到了foo_main函数中（行3，行5-13），而bar_main函数中则直接调用了test_inline函数（行34）</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">inline_test.s</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span>
+<span class="normal"><a href="#__codelineno-2-32">32</a></span>
+<span class="normal"><a href="#__codelineno-2-33">33</a></span>
+<span class="normal"><a href="#__codelineno-2-34">34</a></span>
+<span class="normal"><a href="#__codelineno-2-35">35</a></span>
+<span class="normal"><a href="#__codelineno-2-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nf">Starting</span><span class="w"> </span><span class="no">disassembly</span><span class="w"> </span><span class="no">of</span><span class="w"> </span><span class="no">section</span><span class="w"> </span><span class="mi">182</span><span class="w"> </span><span class="p">(.</span><span class="no">text.inline_test.foo_main</span><span class="p">):</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="hll"><span class="w">    </span><span class="nl">__test_i:</span><span class="w">    </span><span class="nf">sub.a</span><span class="w">  </span><span class="no">sp</span><span class="p">,</span><span class="mi">#0</span><span class="no">x8</span>
+</span><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="err">80466</span><span class="nl">ee2:</span><span class="w">    </span><span class="nf">nop</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">ee4:</span><span class="w">    </span><span class="nf">mov</span><span class="w">    </span><span class="no">d15</span><span class="p">,</span><span class="mi">#0</span><span class="no">x0</span>
+</span><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">ee6:</span><span class="w">    </span><span class="nf">movh.a</span><span class="w"> </span><span class="no">a15</span><span class="p">,</span><span class="mi">#0</span><span class="no">x804a</span>
+</span><a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">eea:</span><span class="w">    </span><span class="nf">lea</span><span class="w">    </span><span class="no">a15</span><span class="p">,[</span><span class="no">a15</span><span class="p">]</span><span class="mi">0x4354</span>
+</span><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">eee:</span><span class="w">    </span><span class="nf">lea</span><span class="w">    </span><span class="no">a12</span><span class="p">,</span><span class="mi">0x63</span>
+</span><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">ef2:</span><span class="w">    </span><span class="nf">st.w</span><span class="w">   </span><span class="p">[</span><span class="no">sp</span><span class="p">],</span><span class="no">d15</span>
+</span><a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">ef4:</span><span class="w">    </span><span class="nf">mov.aa</span><span class="w"> </span><span class="no">a4</span><span class="p">,</span><span class="no">a15</span>
+</span><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">ef6:</span><span class="w">    </span><span class="nf">call</span><span class="w">   </span><span class="mi">0x8045291c</span>
+</span><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">efa:</span><span class="w">    </span><span class="nf">add</span><span class="w">    </span><span class="no">d15</span><span class="p">,</span><span class="mi">#0</span><span class="no">x1</span>
+</span><a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">efc:</span><span class="w">    </span><span class="nf">loop</span><span class="w">   </span><span class="no">a12</span><span class="p">,</span><span class="mi">0x80466ef2</span>
+</span><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="err">80466</span><span class="nl">efe:</span><span class="w">    </span><span class="nf">ret</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="nf">Starting</span><span class="w"> </span><span class="no">disassembly</span><span class="w"> </span><span class="no">of</span><span class="w"> </span><span class="no">section</span><span class="w"> </span><span class="mi">181</span><span class="w"> </span><span class="p">(.</span><span class="no">text.inline_test.test_inline</span><span class="p">):</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="hll"><span class="w">    </span><span class="nl">__foo_ma:</span><span class="w">    </span><span class="nf">sub.a</span><span class="w">  </span><span class="no">sp</span><span class="p">,</span><span class="mi">#0</span><span class="no">x8</span>
+</span><a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f02:</span><span class="w">    </span><span class="nf">mov</span><span class="w">    </span><span class="no">d15</span><span class="p">,</span><span class="mi">#0</span><span class="no">x0</span>
+</span><a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f04:</span><span class="w">    </span><span class="nf">movh.a</span><span class="w"> </span><span class="no">a15</span><span class="p">,</span><span class="mi">#0</span><span class="no">x804a</span>
+</span><a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f08:</span><span class="w">    </span><span class="nf">lea</span><span class="w">    </span><span class="no">a15</span><span class="p">,[</span><span class="no">a15</span><span class="p">]</span><span class="mi">0x4354</span>
+</span><a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f0c:</span><span class="w">    </span><span class="nf">lea</span><span class="w">    </span><span class="no">a12</span><span class="p">,</span><span class="mi">0x63</span>
+</span><a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f10:</span><span class="w">    </span><span class="nf">st.w</span><span class="w">   </span><span class="p">[</span><span class="no">sp</span><span class="p">],</span><span class="no">d15</span>
+</span><a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f12:</span><span class="w">    </span><span class="nf">mov.aa</span><span class="w"> </span><span class="no">a4</span><span class="p">,</span><span class="no">a15</span>
+</span><a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f14:</span><span class="w">    </span><span class="nf">call</span><span class="w">   </span><span class="mi">0x8045291c</span>
+</span><a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f18:</span><span class="w">    </span><span class="nf">add</span><span class="w">    </span><span class="no">d15</span><span class="p">,</span><span class="mi">#0</span><span class="no">x1</span>
+</span><a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f1a:</span><span class="w">    </span><span class="nf">loop</span><span class="w">   </span><span class="no">a12</span><span class="p">,</span><span class="mi">0x80466f10</span>
+</span><a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f1c:</span><span class="w">    </span><span class="nf">ret</span>
+</span><a id="__codelineno-2-30" name="__codelineno-2-30"></a>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="nf">Starting</span><span class="w"> </span><span class="no">disassembly</span><span class="w"> </span><span class="no">of</span><span class="w"> </span><span class="no">section</span><span class="w"> </span><span class="mi">184</span><span class="w"> </span><span class="p">(.</span><span class="no">text.inline_test1.bar_main</span><span class="p">):</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">    </span><span class="nl">bar_main:</span><span class="w">    </span><span class="nf">nop</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="hll"><span class="w">    </span><span class="err">80466</span><span class="nl">f22:</span><span class="w">    </span><span class="nf">call</span><span class="w">   </span><span class="mi">0x80466f00</span>
+</span><a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">    </span><span class="err">80466</span><span class="nl">f26:</span><span class="w">    </span><span class="nf">nop</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">    </span><span class="err">80466</span><span class="nl">f28:</span><span class="w">    </span><span class="nf">ret</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="2">实验2🍥</h3>
+<p>在头文件中使用inline关键字进行函数定义，在源文件中直接进行调用</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">inline_test.h</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cp">#ifndef INLINE_TEST_H</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="cp">#define INLINE_TEST_H</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Printk.h&quot;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">__attribute__</span><span class="p">((</span><span class="n">always_inline</span><span class="p">))</span><span class="w"> </span><span class="kr">inline</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kt">void</span><span class="w"> </span><span class="n">test_inline</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="n">printk</span><span class="p">(</span><span class="s">&quot;test_inline %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="p">}</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="cp">#endif</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">inline_test.c</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;inline_test.h&quot;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">foo_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="kr">__asm</span><span class="p">(</span><span class="s">&quot;nop&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="n">test_inline</span><span class="p">();</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">inline_test1.c</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;inline_test.h&quot;</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kt">void</span><span class="w"> </span><span class="nf">bar_main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">test_inline</span><span class="p">();</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+使用如上方式进行编译，编译器直接报错，</p>
+<p><div class="highlight"><span class="filename">编译报错信息</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ltc<span class="w"> </span>E108:<span class="w"> </span>multiple<span class="w"> </span>definitions<span class="w"> </span>of<span class="w"> </span>symbol<span class="w"> </span><span class="s2">&quot;test_inline&quot;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>both<span class="w"> </span><span class="s2">&quot;inline_test1.o&quot;</span><span class="w"> </span>and<span class="w"> </span><span class="s2">&quot;inline_test.o&quot;</span>
+</code></pre></div>
+为啥使用了inline关键字，在代码链接的时候还会存在符号冲突的问题呢？
+既然有符号冲突，那么就说明在链接的时候，编译器在链接的时候找到了两个test_inline函数的定义，那么这两个定义分别在哪里呢？查看inline_test.o文件的汇编代码，可以看到在行7-15处foo_main函数对test_inline函数做了内联展开，编译器同时在目标文件中保留了test_inlie函数的函数定义，行22-33处是test_inline函数的定义，同理inline_test1.o文件中也存在test_inline函数的定义，所以在链接的时候就会存在符号冲突的问题。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">查看inline_test.o文件</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span>
+<span class="normal"><a href="#__codelineno-7-25">25</a></span>
+<span class="normal"><a href="#__codelineno-7-26">26</a></span>
+<span class="normal"><a href="#__codelineno-7-27">27</a></span>
+<span class="normal"><a href="#__codelineno-7-28">28</a></span>
+<span class="normal"><a href="#__codelineno-7-29">29</a></span>
+<span class="normal"><a href="#__codelineno-7-30">30</a></span>
+<span class="normal"><a href="#__codelineno-7-31">31</a></span>
+<span class="normal"><a href="#__codelineno-7-32">32</a></span>
+<span class="normal"><a href="#__codelineno-7-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">#&gt; hldumptc.exe -F2 inline_test.o &gt; inline_test.o.asm</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>----------<span class="w"> </span>Section<span class="w"> </span>dump<span class="w"> </span>----------
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">                                       </span>.sdecl<span class="w"> </span><span class="s1">&#39;.text.inline_test.foo_main&#39;</span>,<span class="w"> </span>CODE<span class="w"> </span>AT<span class="w"> </span>0x0
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">                                       </span>.sect<span class="w">  </span><span class="s1">&#39;.text.inline_test.foo_main&#39;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="m">00000000</span><span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w">        </span>foo_main:<span class="w">        </span>nop
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="hll"><span class="m">00000002</span><span class="w"> </span>da<span class="w"> </span><span class="m">00</span><span class="w">                         </span>mov<span class="w">         </span>d15,#0x0
+</span><a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="hll"><span class="m">00000004</span><span class="w"> </span><span class="m">91</span><span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w"> </span>f0<span class="w">                   </span>movh.a<span class="w">      </span>a15,#0x0
+</span><a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="hll"><span class="m">00000008</span><span class="w"> </span>d9<span class="w"> </span>ff<span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w">                   </span>lea<span class="w">         </span>a15,<span class="o">[</span>a15<span class="o">]</span>0x0
+</span><a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="hll">0000000c<span class="w"> </span>c5<span class="w"> </span>0c<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">10</span><span class="w">                   </span>lea<span class="w">         </span>a12,0x63
+</span><a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="hll"><span class="m">00000010</span><span class="w"> </span><span class="m">40</span><span class="w"> </span>f4<span class="w">                         </span>mov.aa<span class="w">      </span>a4,a15
+</span><a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="hll"><span class="m">00000012</span><span class="w"> </span><span class="m">02</span><span class="w"> </span>f4<span class="w">                         </span>mov<span class="w">         </span>d4,d15
+</span><a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="hll"><span class="m">00000014</span><span class="w"> </span>6d<span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w">                   </span>call<span class="w">        </span>0x14
+</span><a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="hll"><span class="m">00000018</span><span class="w"> </span>c2<span class="w"> </span>1f<span class="w">                         </span>add<span class="w">         </span>d15,#0x1
+</span><a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="hll">0000001a<span class="w"> </span><span class="nb">fc</span><span class="w"> </span>cb<span class="w">                         </span>loop<span class="w">        </span>a12,0x10
+</span><a id="__codelineno-7-16" name="__codelineno-7-16"></a>0000001c<span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">90</span><span class="w">        </span>__test_inline_function_end:ret
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">                </span>.sdecl<span class="w"> </span><span class="s1">&#39;.rodata.inline_test..1.str&#39;</span>,DATA<span class="w"> </span>AT<span class="w"> </span>0x0
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">                </span>.sect<span class="w">  </span><span class="s1">&#39;.rodata.inline_test..1.str&#39;</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">                </span>.byte<span class="w"> </span><span class="m">74</span>,65,73,74,5f,69,6e,6c,69,6e,65,20,25,64,0a,00<span class="p">;</span><span class="w"> </span>test_inline<span class="w"> </span>%d..
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="hll"><span class="w">                                       </span>.sdecl<span class="w"> </span><span class="s1">&#39;.text.inline_test.test_inline&#39;</span>,<span class="w"> </span>CODE<span class="w"> </span>AT<span class="w"> </span>0x0
+</span><a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="hll"><span class="w">                                       </span>.sect<span class="w">  </span><span class="s1">&#39;.text.inline_test.test_inline&#39;</span>
+</span><a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="hll"><span class="m">00000000</span><span class="w"> </span>da<span class="w"> </span><span class="m">00</span><span class="w">        </span>foo_main:<span class="w">        </span>mov<span class="w">         </span>d15,#0x0
+</span><a id="__codelineno-7-25" name="__codelineno-7-25"></a><span class="hll"><span class="m">00000002</span><span class="w"> </span><span class="m">91</span><span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w"> </span>f0<span class="w">                   </span>movh.a<span class="w">      </span>a15,#0x0
+</span><a id="__codelineno-7-26" name="__codelineno-7-26"></a><span class="hll"><span class="m">00000006</span><span class="w"> </span>d9<span class="w"> </span>ff<span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w">                   </span>lea<span class="w">         </span>a15,<span class="o">[</span>a15<span class="o">]</span>0x0
+</span><a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="hll">0000000a<span class="w"> </span>c5<span class="w"> </span>0c<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">10</span><span class="w">                   </span>lea<span class="w">         </span>a12,0x63
+</span><a id="__codelineno-7-28" name="__codelineno-7-28"></a><span class="hll">0000000e<span class="w"> </span><span class="m">40</span><span class="w"> </span>f4<span class="w">                         </span>mov.aa<span class="w">      </span>a4,a15
+</span><a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="hll"><span class="m">00000010</span><span class="w"> </span><span class="m">02</span><span class="w"> </span>f4<span class="w">                         </span>mov<span class="w">         </span>d4,d15
+</span><a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="hll"><span class="m">00000012</span><span class="w"> </span>6d<span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w">                   </span>call<span class="w">        </span>0x12
+</span><a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="hll"><span class="m">00000016</span><span class="w"> </span>c2<span class="w"> </span>1f<span class="w">                         </span>add<span class="w">         </span>d15,#0x1
+</span><a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="hll"><span class="m">00000018</span><span class="w"> </span><span class="nb">fc</span><span class="w"> </span>cb<span class="w">                         </span>loop<span class="w">        </span>a12,0xe
+</span><a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="hll">0000001a<span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">90</span><span class="w">                         </span>ret
+</span></code></pre></div></td></tr></table></div>
+根据GNU手册中的描述：</p>
+<blockquote>
+<p>When an inline function is not static, then the compiler must assume that there may be calls from other source files;  </p>
+</blockquote>
+<p>不使用static关键字定义的inline函数，编译器会假设在其它源文件中存在对该函数的调用，所以编译器会在目标文件中保留该函数的定义，所以在链接的时候就会存在符号冲突的问题。</p>
+<h3 id="3">实验3🍥</h3>
+<p>在头文件中使用inline关键字进行函数定义，同时使用static关键字进行修饰</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">inline_test.h</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="cp">#ifndef INLINE_TEST_H</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="cp">#define INLINE_TEST_H</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Printk.h&quot;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">__attribute__</span><span class="p">((</span><span class="n">always_inline</span><span class="p">))</span><span class="w"> </span><span class="kr">inline</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">test_inline</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="n">printk</span><span class="p">(</span><span class="s">&quot;test_inline %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="p">}</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="cp">#endif</span>
+</code></pre></div></td></tr></table></div>
+查看test_inline.o文件的汇编代码，发现test_inline函数的定义已经不存在了，编译器在链接的时候也不会存在符号冲突的问题了。
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">查看inline_test.o文件</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span>
+<span class="normal"><a href="#__codelineno-9-13">13</a></span>
+<span class="normal"><a href="#__codelineno-9-14">14</a></span>
+<span class="normal"><a href="#__codelineno-9-15">15</a></span>
+<span class="normal"><a href="#__codelineno-9-16">16</a></span>
+<span class="normal"><a href="#__codelineno-9-17">17</a></span>
+<span class="normal"><a href="#__codelineno-9-18">18</a></span>
+<span class="normal"><a href="#__codelineno-9-19">19</a></span>
+<span class="normal"><a href="#__codelineno-9-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">#&gt; hldumptc.exe -F2 inline_test.o &gt; inline_test.o.asm</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>----------<span class="w"> </span>Section<span class="w"> </span>dump<span class="w"> </span>----------
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">                </span>.sdecl<span class="w"> </span><span class="s1">&#39;.rodata.inline_test..1.str&#39;</span>,DATA<span class="w"> </span>AT<span class="w"> </span>0x0
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">                </span>.sect<span class="w">  </span><span class="s1">&#39;.rodata.inline_test..1.str&#39;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">                </span>.byte<span class="w"> </span><span class="m">74</span>,65,73,74,5f,69,6e,6c,69,6e,65,20,25,64,0a,00<span class="p">;</span><span class="w"> </span>test_inline<span class="w"> </span>%d..
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">                                       </span>.sdecl<span class="w"> </span><span class="s1">&#39;.text.inline_test.foo_main&#39;</span>,<span class="w"> </span>CODE<span class="w"> </span>AT<span class="w"> </span>0x0
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">                                       </span>.sect<span class="w">  </span><span class="s1">&#39;.text.inline_test.foo_main&#39;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="m">00000000</span><span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w">        </span>foo_main:<span class="w">        </span>nop
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="m">00000002</span><span class="w"> </span>da<span class="w"> </span><span class="m">00</span><span class="w">                         </span>mov<span class="w">         </span>d15,#0x0
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="m">00000004</span><span class="w"> </span><span class="m">91</span><span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w"> </span>f0<span class="w">                   </span>movh.a<span class="w">      </span>a15,#0x0
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="m">00000008</span><span class="w"> </span>d9<span class="w"> </span>ff<span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w">                   </span>lea<span class="w">         </span>a15,<span class="o">[</span>a15<span class="o">]</span>0x0
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>0000000c<span class="w"> </span>c5<span class="w"> </span>0c<span class="w"> </span><span class="m">23</span><span class="w"> </span><span class="m">10</span><span class="w">                   </span>lea<span class="w">         </span>a12,0x63
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="m">00000010</span><span class="w"> </span><span class="m">40</span><span class="w"> </span>f4<span class="w">                         </span>mov.aa<span class="w">      </span>a4,a15
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="m">00000012</span><span class="w"> </span><span class="m">02</span><span class="w"> </span>f4<span class="w">                         </span>mov<span class="w">         </span>d4,d15
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="m">00000014</span><span class="w"> </span>6d<span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">00</span><span class="w">                   </span>call<span class="w">        </span>0x14
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="m">00000018</span><span class="w"> </span>c2<span class="w"> </span>1f<span class="w">                         </span>add<span class="w">         </span>d15,#0x1
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>0000001a<span class="w"> </span><span class="nb">fc</span><span class="w"> </span>cb<span class="w">                         </span>loop<span class="w">        </span>a12,0x10
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a>0000001c<span class="w"> </span><span class="m">00</span><span class="w"> </span><span class="m">90</span><span class="w">                         </span>ret
+</code></pre></div></td></tr></table></div></p>
+<h3 id="_1">总结📋</h3>
+<ul>
+<li>inline关键字的作用是告诉编译器，需要将目标函数在调用的地方直接展开，而不是进行常规地函数调用，利用空间换时间的策略，提高代码的执行效率。</li>
+<li>inline关键字的使用场景：<ul>
+<li>在头文件中使用inline关键字进行函数定义，同时使用static关键字进行修饰</li>
+<li>在源文件中使用inline关键字进行函数定义，在其它源文件中使用extern关键字进行声明，定义处源文件中使用目标inline函数会被直接展开，而其它源文件中使用目标inline函数会被直接调用</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">参考资料</h2>
+<ul>
+<li><a href="https://www.tasking.com/support/tricore/ctc_user_guide_v6.2r1.pdf">TASKING编译器手册</a></li>
+<li><a href="https://gcc.gnu.org/onlinedocs/gcc-6.1.0/gcc/Inline.html">GNU在线文档</a></li>
+</ul>
+<hr />
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2024-11-17
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/EWYan"  target="_blank" rel="noopener">Juzi Yan</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/EWYan" target="_blank" rel="noopener" title="Juzi&#39;s github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.top", "search.suggest", "search.highlight", "content.code.annotation", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
