@@ -70,6 +70,7 @@ nav:
     - 📝技术碎笔:
       - tricore context: tech/context_switch.md
       - inline关键字应用: tech/inline关键字.md
+      - venv实践: tech/venv_setting.md
 
     - 📦它山之石:
       - 👀阅读推荐: others/reading.md
