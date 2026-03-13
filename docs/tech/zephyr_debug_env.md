@@ -4,17 +4,17 @@
 
 ## 📦 脚本文件说明
 
-本文提到的所有脚本文件都已包含在本博客仓库中，位于 [`scripts/`](scripts/) 目录下。你可以直接下载使用，也可以根据需要进行修改。
+本文提到的所有脚本文件都已包含在本博客仓库中，位于 [`scripts/`](../scripts/) 目录下。你可以直接下载使用，也可以根据需要进行修改。
 
 ### 可用脚本列表：
-- [`download-deps.sh`](scripts/download-deps.sh) - 下载系统依赖包
-- [`install-deps-offline.sh`](scripts/install-deps-offline.sh) - 离线安装依赖
-- [`download-sdk.sh`](scripts/download-sdk.sh) - 下载Zephyr SDK
-- [`install-sdk.sh`](scripts/install-sdk.sh) - 安装SDK
-- [`download-zephyr-src.sh`](scripts/download-zephyr-src.sh) - 下载Zephyr源码
-- [`download-python-deps.sh`](scripts/download-python-deps.sh) - 下载Python依赖
-- [`setup-offline.sh`](scripts/setup-offline.sh) - 完整的离线安装脚本
-- [`my-first-app-build.sh`](scripts/my-first-app-build.sh) - 示例应用构建脚本
+- [`download-deps.sh`](../scripts/download-deps.sh) - 下载系统依赖包
+- [`install-deps-offline.sh`](../scripts/install-deps-offline.sh) - 离线安装依赖
+- [`download-sdk.sh`](../scripts/download-sdk.sh) - 下载Zephyr SDK
+- [`install-sdk.sh`](../scripts/install-sdk.sh) - 安装SDK
+- [`download-zephyr-src.sh`](../scripts/download-zephyr-src.sh) - 下载Zephyr源码
+- [`download-python-deps.sh`](../scripts/download-python-deps.sh) - 下载Python依赖
+- [`setup-offline.sh`](../scripts/setup-offline.sh) - 完整的离线安装脚本
+- [`my-first-app-build.sh`](../scripts/my-first-app-build.sh) - 示例应用构建脚本
 
 ## 📋 目录
 
@@ -398,46 +398,46 @@ rm -rf ~/zephyr-sdk-*
 
 ## 📜 脚本说明 {#_7}
 
-所有脚本文件已包含在本文档的 [`scripts/`](scripts/) 目录中，你可以直接下载使用。
+所有脚本文件已包含在本文档的 [`scripts/`](../scripts/) 目录中，你可以直接下载使用。
 
 ### 核心脚本功能
 
-#### 1. [`download-deps.sh`](scripts/download-deps.sh)
+#### 1. [`download-deps.sh`](../scripts/download-deps.sh)
 - 下载所有系统依赖包
 - 支持Ubuntu/Debian系统
 - 自动处理版本依赖
 
-#### 2. [`install-deps-offline.sh`](scripts/install-deps-offline.sh)
+#### 2. [`install-deps-offline.sh`](../scripts/install-deps-offline.sh)
 - 离线安装系统依赖
 - 自动解决依赖关系
 - 提供安装进度显示
 
-#### 3. [`download-sdk.sh`](scripts/download-sdk.sh)
+#### 3. [`download-sdk.sh`](../scripts/download-sdk.sh)
 - 下载Zephyr SDK
 - 支持多版本选择
 - 自动校验文件完整性
 
-#### 4. [`install-sdk.sh`](scripts/install-sdk.sh)
+#### 4. [`install-sdk.sh`](../scripts/install-sdk.sh)
 - 安装Zephyr SDK
 - 设置环境变量
 - 配置工具链路径
 
-#### 5. [`download-zephyr-src.sh`](scripts/download-zephyr-src.sh)
+#### 5. [`download-zephyr-src.sh`](../scripts/download-zephyr-src.sh)
 - 下载Zephyr源码
 - 包含所有模块和示例
 - 支持指定版本分支
 
-#### 6. [`download-python-deps.sh`](scripts/download-python-deps.sh)
+#### 6. [`download-python-deps.sh`](../scripts/download-python-deps.sh)
 - 下载Python依赖包
 - 生成requirements.txt
 - 支持离线pip安装
 
-#### 7. [`setup-offline.sh`](scripts/setup-offline.sh)
+#### 7. [`setup-offline.sh`](../scripts/setup-offline.sh)
 - 一键安装脚本
 - 完整的安装流程
 - 详细的日志输出
 
-#### 8. [`my-first-app-build.sh`](scripts/my-first-app-build.sh)
+#### 8. [`my-first-app-build.sh`](../scripts/my-first-app-build.sh)
 - 示例应用构建脚本
 - 支持多种开发板
 - 提供详细的构建信息
