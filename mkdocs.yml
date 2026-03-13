@@ -129,10 +129,11 @@ copyright: |
 nav:
     - 📰首页: index.md
     - 📝技术碎笔:
+      - Linux内核调试环境搭建指南: tech/linux_kernel_debug_env.md
+      - Zephyr RTOS调试环境搭建指南: tech/zephyr_debug_env.md
       - TriCore上下文切换详解: tech/context_switch.md
       - inline关键字应用指南: tech/inline关键字.md
       - Python虚拟环境实践: tech/venv_setting.md
-      - Zephyr RTOS调试环境搭建指南: tech/zephyr_debug_env.md
 
     - 📦它山之石:
       - 👀阅读推荐: others/reading.md
