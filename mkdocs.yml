@@ -5,7 +5,6 @@ site_url: https://ewyan.github.io/juzidaxia/
 
 theme:
   name: material
-  custom_dir: docs/overrides
   language: zh
 
   features:
