@@ -1,56 +1,102 @@
 site_name: 莫问前程 - just for fun
 site_author: juzi
-site_description: 桔子的自留地
+site_description: 桔子的技术博客与生活记录 - 分享技术实践、读书笔记和生活感悟
+site_url: https://ewyan.github.io/juzidaxia/
 
 theme:
   name: material
+  custom_dir: docs/overrides
+  language: zh
 
   features:
     - navigation.tabs
     - navigation.instant
     - navigation.top
+    - navigation.expand
+    - navigation.indexes
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.annotation
     - content.code.copy
     - content.tabs.link
+    - content.tooltips
+    - toc.follow
+  
   palette:
-      - media: "(prefers-color-scheme: light)"
-        scheme: default
-        primary: white
-        accent: black
-        toggle:
-            icon: material/weather-sunny
-            name: Switch to dark mode
-      - media: "(prefers-color-scheme: dark)"
-        scheme: slate
-        primary: black
-        accent: white
-        toggle:
-            icon: material/weather-night
-            name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: 切换到亮色模式
+  
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
   logo: _assets/favicon.jpg
   favicon: _assets/favicon.jpg
+  
   icon:
-      repo: https://github.com/EWYan
+    repo: fontawesome/brands/github
+    edit: material/pencil
+  
+  repo: https://github.com/EWYan/juzidaxia
+  repo_name: GitHub
 
 plugins:
-    - search:
-          lang:
-              - en
-              - zh
-          separator: '[\s\-\.]+'
-    - git-revision-date
+  - search:
+      lang:
+        - en
+        - zh
+      separator: '[\s\-\.]+'
+  - git-revision-date
+  - minify:
+      minify_html: true
 
 extra:
-    social:
-        - icon: fontawesome/brands/github-alt
-          link: https://github.com/EWYan
-          name: Juzi's github
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/EWYan
+      name: GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com
+      name: Twitter
+    - icon: fontawesome/solid/envelope
+      link: mailto:juzivis@qq.com
+      name: Email
+  
+  generator: false
+  
+  consent:
+    title: Cookie consent
+    description: >-
+      我们使用cookie来改善用户体验，继续浏览即表示您同意我们的隐私政策。
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition
@@ -58,19 +104,35 @@ markdown_extensions:
       generic: true
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.mark
   - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/EWYan"  target="_blank" rel="noopener">Juzi Yan</a>
+  &copy; 2023-2024 <a href="https://github.com/EWYan" target="_blank" rel="noopener">Juzi Yan</a> - 
+  本博客采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议 -
+  由 <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a> 和 
+  <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a> 驱动
 
 nav:
-    - 📰Home: index.md
+    - 📰首页: index.md
     - 📝技术碎笔:
-      - tricore context: tech/context_switch.md
-      - inline关键字应用: tech/inline关键字.md
-      - venv实践: tech/venv_setting.md
+      - TriCore上下文切换详解: tech/context_switch.md
+      - inline关键字应用指南: tech/inline关键字.md
+      - Python虚拟环境实践: tech/venv_setting.md
 
     - 📦它山之石:
       - 👀阅读推荐: others/reading.md

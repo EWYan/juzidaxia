@@ -1,0 +1,82 @@
+/* 自定义样式 */
+
+/* 主页标题样式 */
+.md-typeset h1 {
+    color: var(--md-primary-fg-color);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* 引用块样式 */
+.md-typeset blockquote {
+    border-left: 0.2rem solid var(--md-primary-fg-color);
+    font-style: italic;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* 代码块样式 */
+.md-typeset pre > code {
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+/* 图片样式 */
+.md-typeset img {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.md-typeset img:hover {
+    transform: scale(1.02);
+}
+
+/* 链接样式 */
+.md-typeset a {
+    color: var(--md-accent-fg-color);
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+    transition: border-color 0.3s ease;
+}
+
+.md-typeset a:hover {
+    border-bottom-color: var(--md-accent-fg-color);
+}
+
+/* 文章卡片样式 */
+.article-card {
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lightest);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 76.1875em) {
+    .md-nav--primary .md-nav__title {
+        background-color: var(--md-primary-fg-color);
+        color: var(--md-primary-bg-color);
+    }
+}
+
+/* 暗色模式适配 */
+[data-md-color-scheme="slate"] {
+    --md-default-bg-color: #1e1e1e;
+    --md-default-fg-color--light: rgba(255,255,255,0.7);
+}
+
+/* 打印样式 */
+@media print {
+    .md-sidebar,
+    .md-footer,
+    .md-header {
+        display: none;
+    }
+}
