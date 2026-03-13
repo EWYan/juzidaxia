@@ -19,6 +19,7 @@
 ## 📚 最新文章
 
 ### 🛠️ 技术碎笔
+- [Zephyr RTOS调试环境搭建指南](tech/zephyr_debug_env.md) - 完整的离线环境搭建方案
 - [TriCore上下文切换详解](tech/context_switch.md) - 深入解析嵌入式系统中的上下文切换机制
 - [inline关键字应用指南](tech/inline关键字.md) - C/C++中inline关键字的正确使用姿势
 - [Python虚拟环境实践](tech/venv_setting.md) - Python开发环境隔离的最佳实践
