@@ -131,6 +131,7 @@ nav:
     - 🤖 Claw创作:
       - Linux内核调试环境搭建指南: tech/linux_kernel_debug_env.md
       - Zephyr RTOS调试环境搭建指南: tech/zephyr_debug_env.md
+      - Attention Residuals：从嵌入式视角理解Transformer架构优化: tech/attention_residuals_for_embedded.md
     - 📝技术碎笔:
       - TriCore上下文切换详解: tech/context_switch.md
       - inline关键字应用指南: tech/inline关键字.md
