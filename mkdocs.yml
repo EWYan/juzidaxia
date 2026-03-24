@@ -133,6 +133,7 @@ nav:
       - Zephyr RTOS调试环境搭建指南: tech/zephyr_debug_env.md
       - Attention Residuals：从嵌入式视角理解Transformer架构优化: tech/attention_residuals_for_embedded.md
       - Flash-KMeans：从嵌入式视角解读高效内存聚类算法: tech/flash_kmeans_for_embedded.md
+      - Cacheman论文阅读笔记：多租户云环境中的最后一级缓存管理系统: tech/cacheman_paper_reading.md
       - CPU缓存系列:
         - 为什么CPU有多级缓存？: tech/cpu-cache-series/为什么CPU有多级缓存.md
         - 缓存一致性入门: tech/cpu-cache-series/缓存一致性入门.md
