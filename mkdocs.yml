@@ -139,6 +139,7 @@ nav:
         - 缓存一致性入门: tech/cpu-cache-series/缓存一致性入门.md
         - 数据流图快速入门: tech/cpu-cache-series/数据流图快速入门.md
       - 📰 日报专栏: tech/daily-reports/NAVIGATION.md
+      - 📚 JAX扩展教材: tech/jax-scaling-book/NAVIGATION.md
     - 📝技术碎笔:
       - TriCore上下文切换详解: tech/context_switch.md
       - inline关键字应用指南: tech/inline关键字.md
