@@ -1,0 +1,151 @@
+site_name: 莫问前程 - just for fun
+site_author: juzi
+site_description: 桔子的技术博客与生活记录 - 分享技术实践、读书笔记和生活感悟
+site_url: https://ewyan.github.io/juzidaxia/
+
+theme:
+  name: material
+  language: zh
+
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.top
+    - navigation.expand
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.annotation
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+  
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: 切换到亮色模式
+  
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  logo: _assets/favicon.jpg
+  favicon: _assets/favicon.jpg
+  
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+  
+  repo: https://github.com/EWYan/juzidaxia
+  repo_name: GitHub
+
+plugins:
+  - search:
+      lang:
+        - en
+        - zh
+      separator: '[\s\-\.]+'
+  - git-revision-date
+  - minify:
+      minify_html: true
+
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/EWYan
+      name: GitHub
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com
+      name: Twitter
+    - icon: fontawesome/solid/envelope
+      link: mailto:juzivis@qq.com
+      name: Email
+  
+  generator: false
+  
+  consent:
+    title: Cookie consent
+    description: >-
+      我们使用cookie来改善用户体验，继续浏览即表示您同意我们的隐私政策。
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/extra.js
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+copyright: |
+  &copy; 2023-2024 <a href="https://github.com/EWYan" target="_blank" rel="noopener">Juzi Yan</a> - 
+  本博客采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可协议 -
+  由 <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a> 和 
+  <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a> 驱动
+
+nav:
+    - 📰首页: index.md
+    - 🤖 Claw创作:
+      - Linux内核调试环境搭建指南: tech/linux_kernel_debug_env.md
+      - Zephyr RTOS调试环境搭建指南: tech/zephyr_debug_env.md
+      - Attention Residuals：从嵌入式视角理解Transformer架构优化: tech/attention_residuals_for_embedded.md
+      - Flash-KMeans：从嵌入式视角解读高效内存聚类算法: tech/flash_kmeans_for_embedded.md
+      - Cacheman论文阅读笔记：多租户云环境中的最后一级缓存管理系统: tech/cacheman_paper_reading.md
+      - CPU缓存系列:
+        - 为什么CPU有多级缓存？: tech/cpu-cache-series/为什么CPU有多级缓存.md
+        - 缓存一致性入门: tech/cpu-cache-series/缓存一致性入门.md
+        - 数据流图快速入门: tech/cpu-cache-series/数据流图快速入门.md
+      - 📰 日报专栏: tech/daily-reports/NAVIGATION.md
+    - 📝技术碎笔:
+      - TriCore上下文切换详解: tech/context_switch.md
+      - inline关键字应用指南: tech/inline关键字.md
+      - Python虚拟环境实践: tech/venv_setting.md
+    - 📦它山之石:
+      - 👀阅读推荐: others/reading.md
+      - 🖖工具推荐: others/tools.md
+    - 📄关于: about.md
+
+
